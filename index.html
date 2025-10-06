@@ -215,6 +215,184 @@
         </div>
     </section>
 
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="features-section-header">
+                <span class="section-subtitle" data-i18n="features.title">Main Features</span>
+                <h2 class="section-title features-section-title" data-i18n="features.sectionTitle">Everything you need to learn together</h2>
+                <p class="features-section-description section-description" data-i18n="features.description">
+                    SkillShare offers you the most innovative tools to transform your collaborative learning experience.
+                </p>
+            </div>
+
+            <!-- FEATURES ORBIT -->
+            <div class="features-orbit-container">
+                <div class="center-feature" id="centerFeature">
+                    <div class="feature-icon-large">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 id="centerFeatureTitle">Study Groups</h3>
+                    <p id="centerFeatureDescription">Join or create personalized study groups based on your interests and academic goals.</p>
+                    <ul class="feature-benefits" id="centerFeatureBenefits">
+                        <li><i class="fas fa-check-circle"></i> Real-time collaboration</li>
+                        <li><i class="fas fa-check-circle"></i> Member management</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible schedules</li>
+                    </ul>
+                </div>
+
+                <div class="orbit-features" id="orbitFeatures">
+                </div>
+            </div>
+
+            <div class="features-navigation" id="featuresNavigation"></div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="pricing-section">
+        <div class="decorative-shape-pricing shape-1-pricing"></div>
+        <div class="decorative-shape-pricing shape-2-pricing"></div>
+
+        <div class="section-header">
+            <h2 class="section-title price-section-title" data-i18n="pricing.title">Pricing</h2>
+            <p class="section-description" data-i18n="pricing.description">Choose the perfect plan for your learning journey. Upgrade or downgrade at any time.</p>
+            
+            <div class="toggle-container">
+                <span class="toggle-label" data-i18n="pricing.toggle.monthly">Monthly</span>
+                <div class="toggle-switch" onclick="toggleBilling(this)">
+                    <div class="toggle-slider"></div>
+                </div>
+                <span class="toggle-label">
+                    <span data-i18n="pricing.toggle.yearly">Yearly</span> 
+                    <span class="discount-badge" data-i18n="pricing.toggle.discount">Save 20%</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- PRICING CARDS -->
+        <div class="pricing-cards">
+            <!-- FREE PLAN -->
+            <div class="pricing-card">
+                <div class="card-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+
+                <h3 class="plan-name" data-i18n="pricing.plans.free.name">Free Plan</h3>
+
+                <div class="price-container">
+                    <span class="price" data-i18n="pricing.plans.free.price.monthly">$0</span>
+                    <span class="price-period" data-i18n="pricing.plans.free.period">/ month</span>
+                </div>
+
+                <ul class="features-list">
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.free.features.0">Unlimited groups</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.free.features.1">Chat and basic files</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.free.features.2">Video calls of up to 30 min</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.free.features.3">Public quizzes</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.free.features.4">500 MB of storage</span>
+                    </li>
+                </ul>
+
+                <button class="cta-button">
+                    <span class="button-text">
+                        <span data-i18n="pricing.plans.free.button">Get The App</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </button>
+            </div>
+
+            <!-- PREMIUM PLAN -->
+            <div class="pricing-card premium">
+                <div class="popular-badge">
+                    <i class="fas fa-star"></i> <span data-i18n="pricing.plans.premium.popularBadge">Most Popular</span>
+                </div>
+
+                <div class="card-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+
+                <h3 class="plan-name" data-i18n="pricing.plans.premium.name">Premium Plan</h3>
+
+                <div class="price-container">
+                    <span class="old-price" id="oldPrice" data-i18n="pricing.plans.premium.oldPrice.monthly">$12</span>
+                    <span class="price" id="currentPrice" data-i18n="pricing.plans.premium.price.monthly">$10</span>
+                    <span class="price-period" id="pricePeriod" data-i18n="pricing.plans.premium.period.monthly">/ month</span>
+                </div>
+
+                <ul class="features-list">
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.premium.features.0">Unlimited video calls</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.premium.features.1">50 GB of storage</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.premium.features.2">Learning statistics</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.premium.features.3">Advanced Matchmaking</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.premium.features.4">Integration with Google Drive</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <span class="feature-text" data-i18n="pricing.plans.premium.features.5">Advanced and personalized quizzes</span>
+                    </li>
+                </ul>
+
+                <button class="cta-button">
+                    <span class="button-text">
+                        <span data-i18n="pricing.plans.premium.button">Get The App</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>

@@ -241,6 +241,130 @@ class ContentNavigationManager {
 }
 
 // =============================================================================
+// FEATURES ORBIT FUNCTIONALITY
+// =============================================================================
+
+/**
+ * Manages the features orbit carousel
+ */
+class FeaturesOrbitManager {
+    constructor() {
+        this.currentFeature = 0;
+        this.centerFeature = document.getElementById('centerFeature');
+        this.orbitFeatures = document.querySelectorAll('.orbit-feature');
+        this.navigation = document.getElementById('featuresNavigation');
+        this.autoRotateInterval = null;
+        this.init();
+    }
+
+    init() {
+        this.createNavigation();
+        this.setupEventListeners();
+        this.startAutoRotate();
+    }
+
+    // Create navigation dots
+    createNavigation() {
+        if (!this.navigation) return;
+
+        this.navigation.innerHTML = '';
+        
+        features.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'nav-dot';
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => this.changeFeature(index));
+            this.navigation.appendChild(dot);
+        });
+    }
+
+    // Setup event listeners
+    setupEventListeners() {
+        // Orbit feature click listeners
+        this.orbitFeatures.forEach((orbit, index) => {
+            orbit.addEventListener('click', () => this.changeFeature(index));
+        });
+
+        // Pause auto-rotate on interaction
+        const container = document.querySelector('.features-orbit-container');
+        if (container) {
+            container.addEventListener('mouseenter', () => this.stopAutoRotate());
+            container.addEventListener('mouseleave', () => this.startAutoRotate());
+        }
+    }
+
+    // Change to specific feature
+    changeFeature(index) {
+        this.currentFeature = index;
+        const feature = features[index];
+
+        // Exit animation
+        if (this.centerFeature) {
+            this.centerFeature.style.opacity = '0';
+            this.centerFeature.style.transform = 'scale(0.9)';
+        }
+
+        setTimeout(() => {
+            this.updateCenterFeature(feature);
+            this.updateActiveStates(index);
+            
+            // Entry animation
+            if (this.centerFeature) {
+                this.centerFeature.style.opacity = '1';
+                this.centerFeature.style.transform = 'scale(1)';
+            }
+        }, 300);
+    }
+
+    // Update center feature content
+    updateCenterFeature(feature) {
+        if (!this.centerFeature) return;
+
+        this.centerFeature.innerHTML = `
+            <div class="feature-icon-large">
+                <i class="${feature.icon}"></i>
+            </div>
+            <h3>${feature.title}</h3>
+            <p>${feature.description}</p>
+            <ul class="feature-benefits">
+                ${feature.benefits.map(benefit => 
+                    `<li><i class="fas fa-check-circle"></i> ${benefit}</li>`
+                ).join('')}
+            </ul>
+        `;
+    }
+
+    // Update active states for orbits and dots
+    updateActiveStates(index) {
+        // Update orbit features
+        this.orbitFeatures.forEach((orbit, i) => {
+            orbit.classList.toggle('active', i === index);
+        });
+
+        // Update navigation dots
+        const navDots = document.querySelectorAll('.nav-dot');
+        navDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Auto-rotate features
+    startAutoRotate() {
+        this.autoRotateInterval = setInterval(() => {
+            this.currentFeature = (this.currentFeature + 1) % features.length;
+            this.changeFeature(this.currentFeature);
+        }, 5000);
+    }
+
+    stopAutoRotate() {
+        if (this.autoRotateInterval) {
+            clearInterval(this.autoRotateInterval);
+            this.autoRotateInterval = null;
+        }
+    }
+}
+
+// =============================================================================
 // GLOBAL FUNCTIONS (called from HTML)
 // =============================================================================
 
