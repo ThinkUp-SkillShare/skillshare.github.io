@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SkillShare</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="SkillShare es la red social educativa que conecta a estudiantes universitarios, de secundaria y autodidactas en grupos de estudio. Comparte materiales, organiza reuniones y aprende colaborativamente desde tu móvil o navegador.">
+    
+    <!-- META KEYWORDS -->
+    <meta name="keywords" content="grupos de estudio, red social educativa, estudiantes universitarios, secundaria, autodidactas, colaboración, aprendizaje en línea, app de estudio">
+    
+    <!-- META AUTHOR -->
+    <meta name="author" content="Equipo SkillShare">
+    
+    <!-- META ROBOTS -->
+    <meta name="robots" content="index, follow">
+
+    <!-- FAVICON -->
+    <link id="favicon-light" rel="icon" href="assets/images/common/favicon/light_favicon.png">
+    <script src="assets/scripts/common/favicon.js"></script>
+
+    <!-- COMPONENTS -->
+     <link rel="stylesheet" href="assets/css/components/scrollbar/scrollbar.css">
+
+    <!-- RESOURCES -->
+    <link rel="stylesheet" href="assets/fonts/font_face-sarabun.css">
+    <link rel="stylesheet" href="assets/colors/colors.css">
+    <link rel="stylesheet" href="assets/css/animations/animations.css">
+    <script src="assets/data/testimonials.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.css" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- FONT AWESOME ICONS -->
+    <script src="https://kit.fontawesome.com/63a734d1c2.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <!-- HEADER - NAVIGATION BAR -->
+    <header class="header-container">
+        <div class="logo-container"><img class="logo-img" src="assets/images/common/logo/logo.png" alt="Logo SkillShare"></div>
+
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="#home" data-i18n="navigation.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#how-it-work" data-i18n="navigation.howItWork">How it works?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features" data-i18n="navigation.features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing" data-i18n="navigation.pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-us" data-i18n="navigation.aboutUs">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials" data-i18n="navigation.testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-us" data-i18n="navigation.contactUs">Contact us</a></li>
+        </ul>
+
+        <div class="header-actions">
+            <select id="languageSelector" class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        
+            <button class="start-btn" onclick="window.open('https://play.google.com/store/games?device=windows', '_blank')" data-i18n="navigation.getTheApp">Get The App</button>
+    </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <main id="home" class="hero-section">
+        <!-- Floating Elements -->
+        <img class="floating-element person-1" src="assets/images/section/hero/boy-3d.png" alt="">
+        <img class="floating-element person-2" src="assets/images/section/hero/girl-3d.png" alt="">
+        <img class="floating-element rocket" src="assets/images/section/hero/rocket-3d.png" alt="">
+        <img class="floating-element briefcase" src="assets/images/section/hero/camera-3d.png" alt="">
+        <img class="floating-element chat" src="assets/images/section/hero/chat-3d.png" alt="">
+        <img class="floating-element book" src="assets/images/section/hero/book-3d.png" alt="">
+
+        <!-- Hero Content -->
+        <h1 class="hero-title" id="heroTitle" data-i18n="hero.title">
+            Your <span style="color: var(--secondary-color);">space</span> for <span style="color: var(--secondary-color);">learning</span> in <span style="color: var(--tertiary-color);">community</span>
+        </h1>
+        
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Share notes, connect via video calls, and improve your grades with your ideal team.
+        </p>
+
+        <!-- Phone Mockups -->
+        <div class="phones-container">
+
+            <div class="phones-content">
+                <img class="phone phone-left" src="assets/images/section/hero/phone-left.png" alt="Phone Left">
+                <img class="phone phone-center" src="assets/images/section/hero/phone-center.png" alt="Phone Center">
+                <img class="phone phone-right" src="assets/images/section/hero/phone-right.png" alt="Phone Right">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- CALL TO ACTION - DOWNLOAD APP -->
+    <section class="download-app-section">
+        <!-- STATISTICS -->
+        <div class="content-download-app statistics-container">
+            <h3 class="subtitle-statistics" data-i18n="contentDownloadApp.subtitle" data-i18n-html="true">
+                Download SkillShare and find<br>
+                your ideal team.
+            </h3>
+            <div class="statistics-content">
+                <div class="statistics-item active-users-statistics">
+                    <span class="statistic-number">515k+</span>
+                    <span class="statistic-label" data-i18n="contentDownloadApp.statistics.activeUsers.label">Active Users</span>
+                </div>
+                <div class="statistics-item groups-statistics">
+                    <span class="statistic-number">88k+</span>
+                    <span class="statistic-label" data-i18n="contentDownloadApp.statistics.createdGroups.label">Created Groups</span>
+                </div>
+                <div class="statistics-item shared-files-statistics">
+                    <span class="statistic-number">150k+</span>
+                    <span class="statistic-label" data-i18n="contentDownloadApp.statistics.sharedFiles.label">Shared Files</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOWNLOAD LINKS -->
+        <div class="content-download-app download-links-container">
+            <div class="download-link-card download-link-ios">
+                <span class="operating-system" data-i18n="contentDownloadApp.downloadLinkIos.operatingSystem">For iOS</span>
+                <span class="version-operating-system">iOS 15.6+</span>
+                <button class="get-app-btn" onclick="window.open('https://play.google.com/store/games?device=windows', '_blank')" data-i18n="contentDownloadApp.downloadLinkIos.buttonText">Download App</button>
+                <img class="qr-download" src="assets/images/section/download/qrcode_play.google.com.png" alt="QR Play Store">
+
+                <div class="icon-operating-system-container"><i class="icon-operating-system fa-brands fa-android"></i></div>
+            </div>
+
+            <div class="download-link-card download-link-android">
+                <span class="operating-system" data-i18n="contentDownloadApp.downloadLinkAndroid.operatingSystem">For Android</span>
+                <span class="version-operating-system">Android 8.0+</span>
+                <button class="get-app-btn" onclick="window.open('https://www.apple.com/es/app-store/', '_blank')" data-i18n="contentDownloadApp.downloadLinkAndroid.buttonText">Download App</button>
+                <img class="qr-download" src="assets/images/section/download/qrcode_www.apple.com.png" alt="Apple Store">
+
+                <div class="icon-operating-system-container"><i class="icon-operating-system fa-brands fa-apple"></i></div>
+         </div>
+        </div>
+
+        <div id="qr-expanded" class="qr-expanded-overlay">
+            <img id="expanded-qr" src="" alt="QR Expanded">
+        </div>
+    </section>
+
+    <!-- HOT IT WORK -->
+    <section id="how-it-work">
+        <div class="phone-section">
+            <div class="decorative-shape shape-1"></div>
+            <div class="decorative-shape shape-2"></div>
+
+            <div class="phone-container">
+                <img id="step-image" class="phone-img" src="assets/images/section/how-it-works/step1.png" alt="Step 1 - Profile">
+            </div>
+        </div>
+    
+        <div class="content-section">
+            <h2 class="section-title hiw-section-title" data-i18n="howItWork.title">How it works?</h2>
+            <p class="section-description" data-i18n="howItWork.description">Connect with students, share resources, and learn collaboratively in just 3 steps.</p>
+
+            <div class="steps-container">
+                <div class="step step-1 expanded" onclick="toggleStep(this, 'step1.png')">
+                    <div class="step-header">
+                        <div class="step-icon-container"><img class="step-image-icon" src="assets/images/section/how-it-works/phone-3d.png" alt=""></div>
+                        <h3 class="step-title" data-i18n="howItWork.steps.step1.title">Create your profile</h3>
+                    </div>
+                    <div class="step-content">
+                        <p class="step-description" data-i18n="howItWork.steps.step1.description">Create your personalized profile and connect with the student community.</p>
+                        <ul class="step-features">
+                            <li data-i18n="howItWork.steps.step1.features.1">Add your academic information</li>
+                            <li data-i18n="howItWork.steps.step1.features.2">Upload a profile photo</li>
+                            <li data-i18n="howItWork.steps.step1.features.3">Set your study preferences</li>
+                            <li data-i18n="howItWork.steps.step1.features.4">Connect with your university</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step step-2" onclick="toggleStep(this, 'step2.png')">
+                    <div class="step-header">
+                        <div class="step-icon-container"><img class="step-image-icon" src="assets/images/section/how-it-works/chat-bubble-3d.png" alt=""></div>
+                        <h3 class="step-title" data-i18n="howItWork.steps.step2.title">Join or form a group</h3>
+                    </div>
+                    <div class="step-content">
+                        <p class="step-description" data-i18n="howItWork.steps.step2.description">Join existing study groups or create your own.</p>
+                        <ul class="step-features">
+                            <li data-i18n="howItWork.steps.step2.features.1">Search for groups by subject or university</li>
+                            <li data-i18n="howItWork.steps.step2.features.2">Create private or public groups</li>
+                            <li data-i18n="howItWork.steps.step2.features.3">Invite your classmates</li>
+                            <li data-i18n="howItWork.steps.step2.features.4">Set group study times</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step step-3" onclick="toggleStep(this, 'step3.png')">
+                    <div class="step-header">
+                        <div class="step-icon-container"><img class="step-image-icon" src="assets/images/section/how-it-works/fire-3d.png" alt=""></div>
+                        <h3 class="step-title" data-i18n="howItWork.steps.step3.title">Share and learn</h3>
+                    </div>
+                    <div class="step-content">
+                        <p class="step-description" data-i18n="howItWork.steps.step3.description">Share resources, participate in discussions, and learn collaboratively.</p>
+                        <ul class="step-features">
+                            <li data-i18n="howItWork.steps.step3.features.1">Upload and share study files</li>
+                            <li data-i18n="howItWork.steps.step3.features.2">Participate in group quizzes</li>
+                            <li data-i18n="howItWork.steps.step3.features.3">Make study video calls</li>
+                            <li data-i18n="howItWork.steps.step3.features.4">Get feedback from your classmates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p class="section-description" data-i18n="howItWork.finalDescription">
+                Upload files, take quizzes, chat, or make video calls to study better together.
+            </p>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>
+    <script src="assets/scripts/index.js"></script>
+
+</body>
+</html>
