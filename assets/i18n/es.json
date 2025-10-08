@@ -1,0 +1,385 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "howItWork": "¿Cómo funciona?",
+    "features": "Características",
+    "pricing": "Precios",
+    "aboutUs": "Sobre nosotros",
+    "testimonials": "Testimonios",
+    "contactUs": "Contáctanos",
+    "getTheApp": "Obtener la App"
+  },
+  "hero": {
+    "title": {
+      "part1": "Tu",
+      "highlight1": "espacio",
+      "part2": "para",
+      "highlight2": "aprender",
+      "part3": "en",
+      "highlight3": "comunidad"
+    },
+    "subtitle": "Comparte notas, conéctate por videollamadas y mejora tus calificaciones con tu equipo ideal."
+  },
+  "contentDownloadApp": {
+    "subtitle": "Descarga SkillShare y encuentra<br>tu equipo ideal.",
+    "statistics": {
+      "activeUsers": {
+        "label": "Usuarios Activos"
+      },
+      "createdGroups": {
+        "label": "Grupos Creados"
+      },
+      "sharedFiles": {
+        "label": "Archivos Compartidos"
+      }
+    },
+    "downloadLinkIos": {
+      "operatingSystem": "Para iOS",
+      "buttonText": "Descargar App"
+    },
+    "downloadLinkAndroid": {
+      "operatingSystem": "Para Android",
+      "buttonText": "Descargar App"
+    }
+  },
+  "howItWork": {
+    "title": "¿Cómo funciona?",
+    "description": "Conéctate con estudiantes, comparte recursos y aprende de forma colaborativa en solo 3 pasos.",
+    "steps": {
+      "step1": {
+        "title": "Crea tu perfil",
+        "description": "Crea tu perfil personalizado y conéctate con la comunidad estudiantil.",
+        "features": {
+          "1": "Agrega tu información académica",
+          "2": "Sube una foto de perfil",
+          "3": "Configura tus preferencias de estudio",
+          "4": "Conéctate con tu universidad"
+        }
+      },
+      "step2": {
+        "title": "Únete o forma un grupo",
+        "description": "Únete a grupos de estudio existentes o crea el tuyo propio.",
+        "features": {
+          "1": "Busca grupos por materia o universidad",
+          "2": "Crea grupos privados o públicos",
+          "3": "Invita a tus compañeros",
+          "4": "Establece horarios de estudio grupal"
+        }
+      },
+      "step3": {
+        "title": "Comparte y aprende",
+        "description": "Comparte recursos, participa en discusiones y aprende de manera colaborativa.",
+        "features": {
+          "1": "Sube y comparte archivos de estudio",
+          "2": "Participa en exámenes grupales",
+          "3": "Haz videollamadas de estudio",
+          "4": "Recibe retroalimentación de tus compañeros"
+        }
+      }
+    },
+    "finalDescription": "Sube archivos, realiza exámenes, chatea o haz videollamadas para estudiar mejor juntos."
+  },
+    "features": {
+    "title": "Características Principales",
+    "sectionTitle": "Todo lo que necesitas para aprender juntos",
+    "description": "SkillShare te ofrece las herramientas más innovadoras para transformar tu experiencia de aprendizaje colaborativo.",
+    "sections": {
+      "studyGroups": {
+        "title": "Grupos de Estudio",
+        "description": "Únete o crea grupos de estudio personalizados según tus intereses y metas académicas.",
+        "benefits": [
+          "Colaboración en tiempo real",
+          "Gestión de miembros",
+          "Horarios flexibles"
+        ]
+      },
+      "realTimeChat": {
+        "title": "Chat en Tiempo Real",
+        "description": "Comunícate instantáneamente con tus compañeros de estudio sin salir de la plataforma.",
+        "benefits": [
+          "Mensajería instantánea",
+          "Compartir archivos",
+          "Notificaciones en vivo"
+        ]
+      },
+      "videoCalls": {
+        "title": "Videollamadas y Llamadas de Voz",
+        "description": "Realiza sesiones de estudio virtuales con audio y video de alta calidad.",
+        "benefits": [
+          "Video y Audio HD",
+          "Compartir pantalla",
+          "Grabación de sesiones"
+        ]
+      },
+      "documentSharing": {
+        "title": "Compartir Documentos",
+        "description": "Sube, comparte y colabora en documentos con tu grupo de estudio.",
+        "benefits": [
+          "Múltiples formatos",
+          "Edición colaborativa",
+          "Almacenamiento seguro"
+        ]
+      },
+      "interactiveQuizzes": {
+        "title": "Cuestionarios Interactivos",
+        "description": "Crea y participa en cuestionarios para evaluar tus conocimientos.",
+        "benefits": [
+          "Evaluaciones automáticas",
+          "Retroalimentación instantánea",
+          "Variedad de formatos"
+        ]
+      },
+      "customizeProfile": {
+        "title": "Personalizar Perfil",
+        "description": "Personaliza tu perfil para destacar tus habilidades e intereses académicos.",
+        "benefits": [
+          "Avatar personalizado",
+          "Biografía y especialidades",
+          "Historial académico"
+        ]
+      },
+      "earnBadges": {
+        "title": "Gana Insignias",
+        "description": "Recibe reconocimiento por tus logros y contribuciones a la comunidad.",
+        "benefits": [
+          "Sistema de recompensas",
+          "Logros desbloqueables",
+          "Ranking de usuarios"
+        ]
+      },
+      "progressTracking": {
+        "title": "Seguimiento de Progreso",
+        "description": "Realiza un seguimiento de tu progreso académico con estadísticas detalladas.",
+        "benefits": [
+          "Gráficos interactivos",
+          "Métricas de aprendizaje",
+          "Objetivos personalizados"
+        ]
+      }
+    }
+  },
+    "pricing": {
+    "title": "Precios",
+    "description": "Elige el plan perfecto para tu viaje de aprendizaje. Actualiza o reduce en cualquier momento.",
+    "toggle": {
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "discount": "Ahorra 20%"
+    },
+    "plans": {
+      "free": {
+        "name": "Plan Gratuito",
+        "price": {
+          "monthly": "$0",
+          "yearly": "$0"
+        },
+        "period": "/ mes",
+        "features": [
+          "Grupos ilimitados",
+          "Chat y archivos básicos",
+          "Videollamadas de hasta 30 min",
+          "Cuestionarios públicos",
+          "500 MB de almacenamiento"
+        ],
+        "button": "Obtener la App"
+      },
+      "premium": {
+        "name": "Plan Premium",
+        "popularBadge": "Más Popular",
+        "price": {
+          "monthly": "$10",
+          "yearly": "$96"
+        },
+        "oldPrice": {
+          "monthly": "$12",
+          "yearly": "$120"
+        },
+        "period": {
+          "monthly": "/ mes",
+          "yearly": "/ año"
+        },
+        "features": [
+          "Videollamadas ilimitadas",
+          "50 GB de almacenamiento",
+          "Estadísticas de aprendizaje",
+          "Matchmaking Avanzado",
+          "Integración con Google Drive",
+          "Cuestionarios avanzados y personalizados"
+        ],
+        "button": "Obtener la App"
+      }
+    }
+  },
+    "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Transformando el futuro de la educación colaborativa, una conexión a la vez",
+    "image": {
+      "alt": "Equipo ThinkUp",
+      "overlayText": "En ThinkUp, creemos que la educación del futuro es colaborativa, inclusiva y potenciada por la tecnología."
+    },
+    "navigation": {
+      "about": {
+        "text": "Nosotros"
+      },
+      "mission": {
+        "text": "Misión"
+      },
+      "vision": {
+        "text": "Visión"
+      },
+      "values": {
+        "text": "Valores"
+      }
+    },
+    "content": {
+      "about": {
+        "title": "¿Quiénes Somos?",
+        "paragraphs": [
+          "Somos <strong>ThinkUp</strong>, una startup fundada por estudiantes apasionados por la innovación educativa y la tecnología, comprometidos con transformar la forma en que los jóvenes aprenden y colaboran.",
+          "Creemos que el conocimiento crece cuando se comparte, por eso desarrollamos <strong>SkillShare</strong>, una aplicación de redes sociales enfocada en conectar estudiantes con intereses académicos similares para formar grupos de estudio dinámicos y efectivos."
+        ]
+      },
+      "mission": {
+        "title": "Nuestra Misión",
+        "paragraphs": [
+          "Promover el aprendizaje colaborativo a través de la tecnología brindando a los estudiantes una plataforma que conecte a personas con los mismos objetivos académicos, fomente la cooperación y facilite el acceso a recursos de estudio compartidos para mejorar el rendimiento académico."
+        ]
+      },
+      "vision": {
+        "title": "Nuestra Visión",
+        "paragraphs": [
+          "Convertirnos en la <strong>red social educativa líder en Latinoamérica y alrededor del mundo</strong>, donde millones de estudiantes encuentren en SkillShare un espacio seguro, dinámico y confiable para aprender juntos, potenciar sus capacidades y construir comunidades académicas sólidas que trasciendan el aula."
+        ]
+      },
+      "values": {
+        "title": "Nuestros Valores",
+        "items": [
+          {
+            "name": "Colaboración",
+            "description": "Creemos que el conocimiento se multiplica cuando se comparte, y trabajamos para fortalecer la cooperación entre estudiantes."
+          },
+          {
+            "name": "Innovación",
+            "description": "Estamos comprometidos con utilizar la tecnología para transformar la forma en que las personas aprenden y se conectan académicamente."
+          },
+          {
+            "name": "Accesibilidad",
+            "description": "Nos esforzamos por garantizar que todos los estudiantes, sin importar su origen o condición socioeconómica, puedan acceder a herramientas de calidad para mejorar su aprendizaje."
+          },
+          {
+            "name": "Compromiso con la Educación",
+            "description": "Nos impulsa la mejora continua del proceso educativo, promoviendo tanto el desarrollo personal como el colectivo."
+          }
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "description": "¿Qué dicen nuestros usuarios de nosotros?"
+  },
+    "contact": {
+    "title": "Contáctanos",
+    "form": {
+      "header": {
+        "title": "Envíanos un mensaje",
+        "description": "¿Tienes una pregunta? ¿Una queja? ¿O necesitas ayuda? No dudes en contactarnos."
+      },
+      "successMessage": "¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.",
+      "fields": {
+        "firstName": {
+          "label": "Nombre",
+          "placeholder": "Ingresa tu nombre",
+          "error": "Este campo es requerido"
+        },
+        "lastName": {
+          "label": "Apellido",
+          "placeholder": "Ingresa tu apellido",
+          "error": "Este campo es requerido"
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "placeholder": "Ingresa tu correo electrónico",
+          "error": "Ingresa una dirección de correo válida"
+        },
+        "contactNumber": {
+          "label": "Detalles de contacto",
+          "placeholder": "Ingresa tu número",
+          "error": "Ingresa un número válido"
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Ingresa tu mensaje",
+          "error": "Este campo es requerido"
+        }
+      },
+      "submitButton": "Enviar Mensaje"
+    },
+    "info": {
+      "header": "¡Hola! Siempre estamos aquí para ayudarte.",
+      "methods": {
+        "hotline": {
+          "title": "Línea directa:",
+          "number": "+971 56 498 3456"
+        },
+        "whatsapp": {
+          "title": "SMS / Whatsapp",
+          "number": "+51 978 777 386"
+        },
+        "email": {
+          "title": "Correo electrónico:",
+          "address": "support@skillshare.com"
+        }
+      },
+      "social": {
+        "title": "Conéctate con nosotros"
+      }
+    }
+  },
+   "footer": {
+    "brand": {
+      "description": "SkillShare es la red social académica para un mejor trabajo en equipo.",
+      "social": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "tiktok": "TikTok",
+        "email": "Correo electrónico"
+      }
+    },
+    "columns": {
+      "quickLinks": {
+        "title": "Enlaces Rápidos",
+        "links": {
+          "home": "Inicio",
+          "howItWorks": "¿Cómo funciona?",
+          "features": "Características",
+          "pricing": "Precios",
+          "aboutUs": "Sobre nosotros",
+          "testimonials": "Testimonios",
+          "contactUs": "Contáctanos"
+        }
+      },
+      "helpSupport": {
+        "title": "Ayuda y Soporte",
+        "links": {
+          "faq": "Preguntas Frecuentes",
+          "contact": "Contacto",
+          "reportProblem": "Reportar un problema",
+          "blog": "Blog"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "terms": "Términos y Condiciones",
+          "privacy": "Política de Privacidad",
+          "licenses": "Licencias"
+        }
+      }
+    },
+    "bottom": {
+      "copyright": "© 2025 SkillShare. Todos los derechos reservados."
+    }
+  }
+}
