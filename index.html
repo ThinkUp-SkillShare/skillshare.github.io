@@ -393,6 +393,128 @@
         </div>
     </section>
 
+    <!-- ABOUT US SECTION -->
+    <section class="about-section" id="about-us">
+        <div class="about-container">
+            <div class="about-header">
+                <h2 class="section-title about-us-section-title" data-i18n="about.title">About us</h2>
+                <p data-i18n="about.subtitle">Transforming the future of collaborative education, one connection at a time</p>
+            </div>
+
+            <div class="about-content">
+                <div class="image-section">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" data-i18n="about.image.alt" alt="ThinkUp Team">
+                    <div class="image-overlay">
+                        <p class="overlay-text" data-i18n="about.image.overlayText">At ThinkUp, we believe that the education of the future is collaborative, inclusive, and powered by technology.</p>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <div class="nav-buttons">
+                        <button class="nav-btn btn-nosotros active" onclick="showContent('nosotros')">
+                            <i class="fas fa-users"></i>
+                            <span data-i18n="about.navigation.about.text">About Us</span>
+                        </button>
+                        <button class="nav-btn btn-mision" onclick="showContent('mision')">
+                            <i class="fas fa-bullseye"></i>
+                            <span data-i18n="about.navigation.mission.text">Mission</span>
+                        </button>
+                        <button class="nav-btn btn-vision" onclick="showContent('vision')">
+                            <i class="fas fa-eye"></i>
+                            <span data-i18n="about.navigation.vision.text">Vision</span>
+                        </button>
+                        <button class="nav-btn btn-valores" onclick="showContent('valores')">
+                            <i class="fas fa-gem"></i>
+                            <span data-i18n="about.navigation.values.text">Values</span>
+                        </button>
+                    </div>
+
+                    <div class="content-card active" id="nosotros">
+                        <h3 data-i18n="about.content.about.title">Who Are We?</h3>
+                        <p data-i18n="about.content.about.paragraphs.0" data-i18n-html="true">We are <strong>ThinkUp</strong>, a startup founded by students passionate about educational innovation and technology, committed to transforming the way young people learn and collaborate.</p>
+                        <p data-i18n="about.content.about.paragraphs.1" data-i18n-html="true">We believe that knowledge grows when it's shared, which is why we developed <strong>SkillShare</strong>, a social networking app focused on connecting students with similar academic interests to form dynamic and effective study groups.</p>
+                    </div>
+
+                    <div class="content-card" id="mision">
+                        <h3 data-i18n="about.content.mission.title">Our Mission</h3>
+                        <p data-i18n="about.content.mission.paragraphs.0">To promote collaborative learning through technology by providing students with a platform that connects people with the same academic goals, encourages cooperation, and facilitates access to shared study resources to improve academic performance.</p>
+                    </div>
+
+                    <div class="content-card" id="vision">
+                        <h3 data-i18n="about.content.vision.title">Our Vision</h3>
+                        <p data-i18n="about.content.vision.paragraphs.0" data-i18n-html="true">To become the <strong>leading educational social network in Latin America and around the world</strong>, where millions of students find in SkillShare a safe, dynamic, and trustworthy space to learn together, enhance their abilities, and build strong academic communities that go beyond the classroom.</p>
+                    </div>
+
+                    <div class="content-card" id="valores">
+                        <h3 data-i18n="about.content.values.title">Our Values</h3>
+                        <ul>
+                            <li data-i18n="about.content.values.items.0.description" data-i18n-html="true"><strong data-i18n="about.content.values.items.0.name">Collaboration:</strong> We believe that knowledge multiplies when it's shared, and we work to strengthen cooperation among students.</li>
+                            <li data-i18n="about.content.values.items.1.description" data-i18n-html="true"><strong data-i18n="about.content.values.items.1.name">Innovation:</strong> We are committed to using technology to transform the way people learn and connect academically.</li>
+                            <li data-i18n="about.content.values.items.2.description" data-i18n-html="true"><strong data-i18n="about.content.values.items.2.name">Accessibility:</strong> We strive to ensure that all students, regardless of their background or socioeconomic status, can access quality tools to improve their learning.</li>
+                            <li data-i18n="about.content.values.items.3.description" data-i18n-html="true"><strong data-i18n="about.content.values.items.3.name">Commitment to Education:</strong> We are driven by the continuous improvement of the educational process, promoting both personal and collective development.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="testimonials-section">
+        <h2 class="section-title" data-i18n="testimonials.title">Testimonials</h2>
+        <div class="main-subtitle">
+            <h3 class="testimonials-subtitle" data-i18n="testimonials.description">What do our users say about us?</h3>
+        </div>
+        <div class="testimonials-container">
+            <!-- Decorative elements -->
+            <div class="decorative-elements">
+                <img class="floating-element deco-thumb deco-like" src="assets/images/section/testimonials/like-3d.png" alt="Like 3D">
+                <img class="floating-element deco-thumb deco-heart" src="assets/images/section/testimonials/heart-3d.png" alt="Heart 3D">
+                <img class="floating-element deco-thumb deco-star" src="assets/images/section/testimonials/star-3d.png" alt="Star 3D">
+            </div>
+
+            <!-- Previous navigation -->
+            <div class="navigation nav-prev" onclick="previousTestimonial()">
+                <span class="nav-arrow">‹</span>
+            </div>
+
+            <!-- Left side avatar -->
+            <div class="side-avatars avatar-left" onclick="previousTestimonial()">
+                <img id="leftAvatar" src="" alt="Previous User Avatar">
+            </div>
+
+            <!-- Central testimony card -->
+            <div class="testimonial-card active" id="mainTestimonial">
+                <div class="profile-image">
+                    <img id="mainAvatar" src="" alt="User Avatar">
+                </div>
+                <h3 class="user-name" id="mainName"></h3>
+                <p class="user-location" id="mainLocation"></p>
+                <div class="rating">
+                    <i class="star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                    <i class="star fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text" id="mainText"></p>
+            </div>
+
+            <!-- Right side avatar -->
+            <div class="side-avatars avatar-right" onclick="nextTestimonial()">
+                <img id="rightAvatar" src="" alt="Next User Avatar">
+            </div>
+
+            <!-- Next navigation -->
+            <div class="navigation nav-next" onclick="nextTestimonial()">
+                <span class="nav-arrow">›</span>
+            </div>
+        </div>
+
+        <!-- POINT INDICATORS -->
+        <div class="dots-indicator" id="dotsContainer"></div>
+    </section>
+
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>

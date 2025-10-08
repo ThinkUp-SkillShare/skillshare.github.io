@@ -103,6 +103,113 @@ class HowItWorksManager {
 }
 
 // =============================================================================
+// TESTIMONIALS CAROUSEL FUNCTIONALITY
+// =============================================================================
+
+/**
+ * Manages the testimonials carousel with navigation and animations
+ */
+class TestimonialsManager {
+    constructor() {
+        this.currentTestimonial = 0;
+        this.totalTestimonials = testimonials.length;
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.showTestimonial(0);
+        this.activateInitialTestimonial();
+    }
+
+    setupEventListeners() {
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                this.nextTestimonial();
+            } else if (e.key === 'ArrowLeft') {
+                this.previousTestimonial();
+            }
+        });
+    }
+
+    // Update side avatars display
+    updateSideAvatars() {
+        const leftIndex = (this.currentTestimonial - 1 + this.totalTestimonials) % this.totalTestimonials;
+        const rightIndex = (this.currentTestimonial + 1) % this.totalTestimonials;
+        
+        const leftAvatar = document.getElementById('leftAvatar');
+        const rightAvatar = document.getElementById('rightAvatar');
+        
+        if (leftAvatar) leftAvatar.src = testimonials[leftIndex].sideAvatar;
+        if (rightAvatar) rightAvatar.src = testimonials[rightIndex].sideAvatar;
+    }
+
+    // Update main testimonial content
+    updateMainTestimonial() {
+        const current = testimonials[this.currentTestimonial];
+        
+        const mainAvatar = document.getElementById('mainAvatar');
+        const mainName = document.getElementById('mainName');
+        const mainLocation = document.getElementById('mainLocation');
+        const mainText = document.getElementById('mainText');
+        
+        if (mainAvatar) mainAvatar.src = current.avatar;
+        if (mainName) mainName.textContent = current.name;
+        if (mainLocation) mainLocation.textContent = current.location;
+        if (mainText) mainText.textContent = current.text;
+    }
+
+    // Update navigation dots
+    updateDots() {
+        const dotsContainer = document.getElementById('dotsContainer');
+        if (!dotsContainer) return;
+
+        dotsContainer.innerHTML = '';
+        
+        for (let i = 0; i < this.totalTestimonials; i++) {
+            const dot = document.createElement('div');
+            dot.className = i === this.currentTestimonial ? 'dot active' : 'dot';
+            dot.addEventListener('click', () => this.goToTestimonial(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    // Main function to display a testimonial
+    showTestimonial(index) {
+        this.currentTestimonial = index;
+        this.updateMainTestimonial();
+        this.updateSideAvatars();
+        this.updateDots();
+    }
+
+    // Navigation functions
+    nextTestimonial() {
+        this.currentTestimonial = (this.currentTestimonial + 1) % this.totalTestimonials;
+        this.showTestimonial(this.currentTestimonial);
+    }
+
+    previousTestimonial() {
+        this.currentTestimonial = (this.currentTestimonial - 1 + this.totalTestimonials) % this.totalTestimonials;
+        this.showTestimonial(this.currentTestimonial);
+    }
+
+    goToTestimonial(index) {
+        this.showTestimonial(index);
+    }
+
+    // Activate initial testimonial with animation
+    activateInitialTestimonial() {
+        setTimeout(() => {
+            const testimonialCard = document.querySelector('.testimonial-card');
+            if (testimonialCard) {
+                testimonialCard.classList.add('active');
+            }
+        }, 300);
+    }
+}
+
+// =============================================================================
 // PRICING SECTION FUNCTIONALITY
 // =============================================================================
 
