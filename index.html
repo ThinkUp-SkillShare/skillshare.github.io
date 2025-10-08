@@ -34,6 +34,9 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="assets/css/index.css">
 
+    <!-- RESPONSIVE DESIGN -->
+     <link rel="stylesheet" href="assets/css/responsive/responsive.css">
+
     <!-- FONT AWESOME ICONS -->
     <script src="https://kit.fontawesome.com/63a734d1c2.js" crossorigin="anonymous" defer></script>
 </head>
@@ -514,6 +517,185 @@
         <!-- POINT INDICATORS -->
         <div class="dots-indicator" id="dotsContainer"></div>
     </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact-us" class="contact-container">
+        <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+
+        <div class="contact-content">
+            <div class="contact-form-wrapper">
+                <div class="form-header">
+                    <h2 data-i18n="contact.form.header.title">Send us a message</h2>
+                    <p data-i18n="contact.form.header.description">Do you have a question? A complaint? Or do you need help? Don't hesitate to contact us.</p>
+                </div>
+
+                <div class="success-message" id="successMessage" data-i18n="contact.form.successMessage">
+                    Message sent successfully! We'll be in touch soon.
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" data-i18n="contact.form.fields.firstName.label">First Name</label>
+                            <input type="text" id="firstName" name="firstName" data-i18n-placeholder="contact.form.fields.firstName.placeholder" placeholder="Enter your first name">
+                            <span class="error-message" data-i18n="contact.form.fields.firstName.error">This field is required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" data-i18n="contact.form.fields.lastName.label">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" data-i18n-placeholder="contact.form.fields.lastName.placeholder" placeholder="Enter your Last name">
+                            <span class="error-message" data-i18n="contact.form.fields.lastName.error">This field is required</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.fields.email.label">Email</label>
+                        <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.fields.email.placeholder" placeholder="Enter your email">
+                        <span class="error-message" data-i18n="contact.form.fields.email.error">Enter a valid email address</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactNumber" data-i18n="contact.form.fields.contactNumber.label">Contact Details</label>
+                        <input id="contactNumber" type="tel" name="contactNumber" data-i18n-placeholder="contact.form.fields.contactNumber.placeholder" placeholder="Enter your contact number" />
+                        <div class="error-message" data-i18n="contact.form.fields.contactNumber.error">Enter a valid number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.form.fields.message.label">Message</label>
+                        <textarea id="message" name="message" data-i18n-placeholder="contact.form.fields.message.placeholder" placeholder="Enter your message"></textarea>
+                        <span class="error-message" data-i18n="contact.form.fields.message.error">This field is required</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn" data-i18n="contact.form.submitButton">Send a Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info-wrapper">
+                <div class="info-header">
+                    <h3 data-i18n="contact.info.header">Hi! We are always here to help you.</h3>
+                </div>
+
+                <div class="contact-methods">
+                    <a href="#" class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-i18n="contact.info.methods.hotline.title">Hotline:</h4>
+                            <p data-i18n="contact.info.methods.hotline.number">+971 56 498 3456</p>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/51978777386?text=Hola!%20SkillShare%20es%20un%20buen%20proyecto!" target="_blank" class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-i18n="contact.info.methods.whatsapp.title">SMS / Whatsapp</h4>
+                            <p data-i18n="contact.info.methods.whatsapp.number">+51 978 777 386</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:jhosepjamil@gmail.com?body=%C2%A1Hola,%20Jhosep!" target="_blank" class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-i18n="contact.info.methods.email.title">Email:</h4>
+                            <p data-i18n="contact.info.methods.email.address">support@skillshare.com</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-section">
+                    <h4 data-i18n="contact.info.social.title">Connect with us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img class="logo-img" src="assets/images/common/favicon/light_favicon.png" alt="Logo SkillShare">
+                    </div>
+                    <p class="brand-description" data-i18n="footer.brand.description">
+                        SkillShare is the academic social network for better teamwork.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank" class="social-link" aria-label="Facebook" data-i18n-aria-label="footer.brand.social.facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.x.com/" target="_blank" class="social-link" aria-label="Twitter" data-i18n-aria-label="footer.brand.social.twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jh_slin" target="_blank" class="social-link" aria-label="Instagram" data-i18n-aria-label="footer.brand.social.instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank" class="social-link" aria-label="TikTok" data-i18n-aria-label="footer.brand.social.tiktok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="mailto:jhosepjamil@gmail.com?body=%C2%A1Hola,%20Jhosep!" target="_blank" class="social-link" aria-label="Gmail" data-i18n-aria-label="footer.brand.social.email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title" data-i18n="footer.columns.quickLinks.title">Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link" data-i18n="footer.columns.quickLinks.links.home">Home</a>
+                        <a href="#how-it-work" class="footer-link" data-i18n="footer.columns.quickLinks.links.howItWorks">How it works?</a>
+                        <a href="#features" class="footer-link" data-i18n="footer.columns.quickLinks.links.features">Features</a>
+                        <a href="#pricing" class="footer-link" data-i18n="footer.columns.quickLinks.links.pricing">Pricing</a>
+                        <a href="#about-us" class="footer-link" data-i18n="footer.columns.quickLinks.links.aboutUs">About us</a>
+                        <a href="#testimonials" class="footer-link" data-i18n="footer.columns.quickLinks.links.testimonials">Testimonials</a>
+                        <a href="#contact-us" class="footer-link" data-i18n="footer.columns.quickLinks.links.contactUs">Contact us</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title" data-i18n="footer.columns.helpSupport.title">Help Support</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-i18n="footer.columns.helpSupport.links.faq">FAQ</a>
+                        <a href="#contact-us" class="footer-link" data-i18n="footer.columns.helpSupport.links.contact">Contact</a>
+                        <a href="#" class="footer-link" data-i18n="footer.columns.helpSupport.links.reportProblem">Report a problem</a>
+                        <a href="#" class="footer-link" data-i18n="footer.columns.helpSupport.links.blog">Blog</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title" data-i18n="footer.columns.legal.title">Legal</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-i18n="footer.columns.legal.links.terms">Terms and Conditions</a>
+                        <a href="#" class="footer-link" data-i18n="footer.columns.legal.links.privacy">Privacy Policy</a>
+                        <a href="#" class="footer-link" data-i18n="footer.columns.legal.links.licenses">Licenses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright" data-i18n="footer.bottom.copyright">© 2025 SkillShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>

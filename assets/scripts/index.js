@@ -348,6 +348,194 @@ class ContentNavigationManager {
 }
 
 // =============================================================================
+// CONTACT FORM FUNCTIONALITY
+// =============================================================================
+
+/**
+ * Manages contact form validation and submission
+ */
+class ContactFormManager {
+    constructor() {
+        this.form = document.getElementById('contactForm');
+        this.successMessage = document.getElementById('successMessage');
+        this.contactInput = document.querySelector("#contactNumber");
+        this.iti = null;
+        this.init();
+    }
+
+    init() {
+        this.setupInternationalTelephoneInput();
+        this.setupFormEventListeners();
+    }
+
+    // Setup international telephone input
+    setupInternationalTelephoneInput() {
+        if (this.contactInput) {
+            this.iti = window.intlTelInput(this.contactInput, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    fetch("https://ipapi.co/json")
+                        .then((res) => res.json())
+                        .then((data) => callback(data.country_code))
+                        .catch(() => callback("us"));
+                },
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
+            });
+        }
+    }
+
+    setupFormEventListeners() {
+        if (this.form) {
+            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            this.setupInputValidation();
+        }
+    }
+
+    // Handle form submission
+    handleSubmit(e) {
+        e.preventDefault();
+        
+        if (this.validateForm()) {
+            this.submitForm();
+        }
+    }
+
+    // Validate all form fields
+    validateForm() {
+        let isValid = true;
+        const formGroups = this.form.querySelectorAll('.form-group');
+        
+        // Reset previous errors
+        formGroups.forEach(group => {
+            group.classList.remove('error');
+            const errorMsg = group.querySelector('.error-message');
+            if (errorMsg) errorMsg.classList.remove('show');
+        });
+
+        // Validate individual fields
+        if (!this.validateTextField('firstName')) isValid = false;
+        if (!this.validateTextField('lastName')) isValid = false;
+        if (!this.validateEmailField('email')) isValid = false;
+        if (!this.validatePhoneField()) isValid = false;
+        if (!this.validateTextField('message')) isValid = false;
+
+        return isValid;
+    }
+
+    validateTextField(fieldId) {
+        const field = document.getElementById(fieldId);
+        if (!field || !field.value.trim()) {
+            this.showError(field);
+            return false;
+        }
+        return true;
+    }
+
+    validateEmailField(fieldId) {
+        const field = document.getElementById(fieldId);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!field || !field.value.trim() || !emailRegex.test(field.value)) {
+            this.showError(field);
+            return false;
+        }
+        return true;
+    }
+
+    validatePhoneField() {
+        if (!this.iti || !this.iti.isValidNumber()) {
+            this.showError(this.contactInput);
+            return false;
+        }
+        return true;
+    }
+
+    // Show error for specific input field
+    showError(input) {
+        if (!input) return;
+        
+        const formGroup = input.closest('.form-group');
+        if (formGroup) {
+            formGroup.classList.add('error');
+            const errorMsg = formGroup.querySelector('.error-message');
+            if (errorMsg) errorMsg.classList.add('show');
+        }
+    }
+
+    // Submit form data
+    submitForm() {
+        const submitBtn = this.form.querySelector('.submit-btn');
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+        }
+
+        // Simulate form submission
+        setTimeout(() => {
+            this.showSuccessMessage();
+            this.form.reset();
+            
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send a Message';
+            }
+
+            this.logFormData();
+        }, 1500);
+    }
+
+    // Show success message
+    showSuccessMessage() {
+        if (this.successMessage) {
+            this.successMessage.classList.add('show');
+            
+            setTimeout(() => {
+                this.successMessage.classList.remove('show');
+            }, 5000);
+        }
+    }
+
+    // Log form data (for debugging)
+    logFormData() {
+        const formData = {
+            firstName: document.getElementById('firstName')?.value,
+            lastName: document.getElementById('lastName')?.value,
+            email: document.getElementById('email')?.value,
+            contactNumber: this.iti ? this.iti.getNumber() : '',
+            message: document.getElementById('message')?.value
+        };
+        console.log('Formulario enviado:', formData);
+    }
+
+    // Setup real-time input validation
+    setupInputValidation() {
+        const inputs = [
+            document.getElementById('firstName'),
+            document.getElementById('lastName'), 
+            document.getElementById('email'),
+            document.getElementById('contactNumber'),
+            document.getElementById('message')
+        ];
+
+        inputs.forEach(input => {
+            if (input) {
+                input.addEventListener('input', () => this.clearError(input));
+            }
+        });
+    }
+
+    // Clear error state for input field
+    clearError(input) {
+        const formGroup = input.closest('.form-group');
+        if (formGroup) {
+            formGroup.classList.remove('error');
+            const errorMsg = formGroup.querySelector('.error-message');
+            if (errorMsg) errorMsg.classList.remove('show');
+        }
+    }
+}
+
+// =============================================================================
 // FEATURES ORBIT FUNCTIONALITY
 // =============================================================================
 
