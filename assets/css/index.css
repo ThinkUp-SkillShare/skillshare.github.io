@@ -89,23 +89,6 @@ html{
     border-color: var(--secondary-color);
 }
 
-/* START BUTTON */
-.start-btn{
-    padding: 15px 25px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    background: #182438;
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    transition: .3s;
-}
-
-.start-btn:hover{
-    transform: translateY(-5px);
-}
-
 /* ====================
        HERO SECTION
    ==================== */
@@ -235,6 +218,25 @@ html{
 
 .hero-title, .hero-subtitle {
     animation: fadeInUp-hero 1s ease-out;
+}
+
+.hero-cta-btn {
+    margin-top: .1rem;
+    margin-bottom: .5rem;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    transition: .3s ease;
+    z-index: 20;
+}
+
+.hero-cta-btn:hover {
+    transform: translateY(-5px);
 }
 
 /* =======================
